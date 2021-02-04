@@ -17,18 +17,18 @@ public abstract class PhoneBase {
     protected static final String SIZE_5_7 = "5.7";
     protected static final String SIZE_6_7 = "6.7";
 
-    protected static final short BATTERY_4000 = (short) 4000;
-    protected static final short BATTERY_3300 = (short) 3300;
-    protected static final short BATTERY_4800 = (short) 4800;
-    protected static final short BATTERY_4310 = (short) 4310;
+    protected static final short BATTERY_4000 = 4000;
+    protected static final short BATTERY_3300 = 3300;
+    protected static final short BATTERY_4800 = 4800;
+    protected static final short BATTERY_4310 = 4310;
 
-    protected static final short MEMORY_32 = (short) 32;
-    protected static final short MEMORY_128 = (short) 128;
-    protected static final short MEMORY_256 = (short) 256;
+    protected static final short MEMORY_32 = 32;
+    protected static final short MEMORY_128 = 128;
+    protected static final short MEMORY_256 = 256;
 
-    protected static final short RAM_4 = (short) 4;
-    protected static final short RAM_6 = (short) 6;
-    protected static final short RAM_8 = (short) 8;
+    protected static final short RAM_4 = 4;
+    protected static final short RAM_6 = 6;
+    protected static final short RAM_8 = 8;
 
     protected static final String QUALCOMM_SNAPDRAGON_730 = "Qualcomm Snapdragon 730";
     protected static final String QUALCOMM_SNAPDRAGON_821 = "Qualcomm Snapdragon 821";
