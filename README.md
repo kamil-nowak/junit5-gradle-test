@@ -1,7 +1,5 @@
 # junit5 gradle test
 
-# junit5 gradle test
-
 Tests in 'gradleTest3.test': 46 total, 46 passed
 
 ## ProcessorTest 77 ms
