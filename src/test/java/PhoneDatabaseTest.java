@@ -1,4 +1,5 @@
 import com.google.common.collect.Lists;
+import component.ProcessorProducent;
 import org.joda.time.DateTime;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.RepeatedTest;
@@ -75,7 +76,7 @@ class PhoneDatabaseTest extends PhoneBase {
         //given
 
         //when
-        List<Phone> phonesWithQualcom = phoneDatabase.filterByProcessorProducent(ProcessorProducent.QUALCOMM);
+        List<Phone> phonesWithQualcom = phoneDatabase.filterByProcessorProducent(ProcessorProducent.QUALCOMM_SNAPDRAGON);
 
         //then
         assertTrue(phonesWithQualcom.contains(xiaomiMi9T));
@@ -89,7 +90,7 @@ class PhoneDatabaseTest extends PhoneBase {
         //given
 
         //when
-        List<Phone> phonesWithQualcom = phoneDatabase.filterByProcessorProducent(ProcessorProducent.QUALCOMM);
+        List<Phone> phonesWithQualcom = phoneDatabase.filterByProcessorProducent(ProcessorProducent.QUALCOMM_SNAPDRAGON);
 
         //then
         assertAll(
@@ -103,7 +104,7 @@ class PhoneDatabaseTest extends PhoneBase {
     void filterByProcessorProducentIsFast() {
         //given
         ThrowingSupplier<List<Phone>> filterByProcessorProducentSupplier =
-                () -> phoneDatabase.filterByProcessorProducent(ProcessorProducent.QUALCOMM);
+                () -> phoneDatabase.filterByProcessorProducent(ProcessorProducent.QUALCOMM_SNAPDRAGON);
 
         //when
 

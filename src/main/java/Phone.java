@@ -1,17 +1,20 @@
+import component.Processor;
+import component.ProcessorProducent;
+
 public class Phone {
 
-    private String producent;
-    private String model;
-    private String size;
-    private short battery;
-    private short RAM;
-    private short memory;
-    private String processor;
-    private boolean jack;
-    private ReleaseDate releaseDate;
+    private final String producent;
+    private final String model;
+    private final String size;
+    private final short battery;
+    private final short RAM;
+    private final short memory;
+    private final Processor processor;
+    private final boolean jack;
+    private final ReleaseDate releaseDate;
 
     private Phone(String producent, String model, String size, short battery, short RAM,
-                 short memory, String processor, boolean jack, ReleaseDate releaseDate) {
+                 short memory, Processor processor, boolean jack, ReleaseDate releaseDate) {
         this.producent = producent;
         this.model = model;
         this.size = size;
@@ -51,7 +54,7 @@ public class Phone {
         return memory;
     }
 
-    public String getProcessor() {
+    public Processor getProcessor() {
         return processor;
     }
 
@@ -87,22 +90,7 @@ public class Phone {
     }
 
     public ProcessorProducent getProcessorProducent() {
-        if (isProcessorProducentMatch(ProcessorProducent.QUALCOMM)) {
-            return ProcessorProducent.QUALCOMM;
-        }
-        if (isProcessorProducentMatch(ProcessorProducent.SAMSUNG_EXYNOS)) {
-            return ProcessorProducent.SAMSUNG_EXYNOS;
-        }
-        return ProcessorProducent.MEDIA_TEK;
-    }
-
-    private boolean isProcessorProducentMatch(ProcessorProducent processorProducent) {
-        return replaceNotImportantCharacters(this.getProcessor())
-                .contains(replaceNotImportantCharacters(processorProducent.toString()));
-    }
-
-    private String replaceNotImportantCharacters(String value){
-        return value.toLowerCase().replace("_", "").replace(" ", "");
+        return getProcessor().getProducent();
     }
 
     public static class PhoneBuilder {
@@ -112,7 +100,7 @@ public class Phone {
         private short battery;
         private short RAM;
         private short memory;
-        private String processor;
+        private Processor processor;
         private ReleaseDate releaseDate;
         private boolean jack = false;
 
@@ -150,7 +138,7 @@ public class Phone {
             return this;
         }
 
-        public PhoneBuilder processor(String processor) {
+        public PhoneBuilder processor(Processor processor) {
             this.processor = processor;
             return this;
         }
