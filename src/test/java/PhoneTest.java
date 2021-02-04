@@ -1,3 +1,5 @@
+import component.Processor;
+import component.ProcessorProducent;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -132,10 +134,10 @@ class PhoneTest extends PhoneBase {
         //given
 
         //when
-        String xiaomiMi9TProcessor = xiaomiMi9T.getProcessor();
-        String lGG6Processor = lGG6.getProcessor();
-        String samsungGalaxyS21PlusProcessor = samsungGalaxyS21Plus.getProcessor();
-        String realmeV15Processor = realmeV15.getProcessor();
+        Processor xiaomiMi9TProcessor = xiaomiMi9T.getProcessor();
+        Processor lGG6Processor = lGG6.getProcessor();
+        Processor samsungGalaxyS21PlusProcessor = samsungGalaxyS21Plus.getProcessor();
+        Processor realmeV15Processor = realmeV15.getProcessor();
 
         //then
         assertEquals(QUALCOMM_SNAPDRAGON_730, xiaomiMi9TProcessor);
@@ -188,7 +190,7 @@ class PhoneTest extends PhoneBase {
         String xiaomiMi9TStringExpected = "Phone{producent='Xiaomi', model='Mi 9T', size='6.39', battery=4000, RAM=6, memory=128, processor='Qualcomm Snapdragon 730', jack=true, releaseDate='ReleaseDate{Q2/2019}'}";
         String lGG6StringExpected = "Phone{producent='LG', model='G6', size='5.7', battery=3300, RAM=4, memory=32, processor='Qualcomm Snapdragon 821', jack=true, releaseDate='ReleaseDate{Q1/2017}'}";
         String samsungGalaxyS21PlusStringExpected = "Phone{producent='Samsung', model='GALAXY S21+', size='6.7', battery=4800, RAM=8, memory=256, processor='Samsung Exynos 2100', jack=false, releaseDate='ReleaseDate{Q1/2021}'}";
-        String realmeV15StringExpected = "Phone{producent='Realme', model='V15', size='6.7', battery=4310, RAM=8, memory=128, processor='MediaTek Dimensity 720', jack=false, releaseDate='ReleaseDate{Q1/2021}'}";
+        String realmeV15StringExpected = "Phone{producent='Realme', model='V15', size='6.7', battery=4310, RAM=8, memory=128, processor='Mediatek Dimensity 720', jack=false, releaseDate='ReleaseDate{Q1/2021}'}";
 
         //when
         String xiaomiMi9TString = xiaomiMi9T.toString();
@@ -236,10 +238,10 @@ class PhoneTest extends PhoneBase {
     @Test
     void getProcessorProducent() {
         //given
-        ProcessorProducent xiaomiMi9TProcessorProducentExpected = ProcessorProducent.QUALCOMM;
-        ProcessorProducent lGG6ProcessorProducentExpected = ProcessorProducent.QUALCOMM;
+        ProcessorProducent xiaomiMi9TProcessorProducentExpected = ProcessorProducent.QUALCOMM_SNAPDRAGON;
+        ProcessorProducent lGG6ProcessorProducentExpected = ProcessorProducent.QUALCOMM_SNAPDRAGON;
         ProcessorProducent samsungGalaxyS21PlusProcessorProducentExpected = ProcessorProducent.SAMSUNG_EXYNOS;
-        ProcessorProducent realmeV15ProcessorProducentExpected = ProcessorProducent.MEDIA_TEK;
+        ProcessorProducent realmeV15ProcessorProducentExpected = ProcessorProducent.MEDIATEK;
 
         //when
         ProcessorProducent xiaomiMi9TProcessorProducent = xiaomiMi9T.getProcessorProducent();

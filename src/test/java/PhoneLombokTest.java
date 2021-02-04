@@ -1,3 +1,4 @@
+import component.ProcessorProducent;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -323,10 +324,10 @@ class PhoneLombokTest {
     @Test
     void getProcessorProducent() {
         //given
-        ProcessorProducent xiaomiMi9TProcessorProducentExpected = ProcessorProducent.QUALCOMM;
-        ProcessorProducent lGG6ProcessorProducentExpected = ProcessorProducent.QUALCOMM;
+        ProcessorProducent xiaomiMi9TProcessorProducentExpected = ProcessorProducent.QUALCOMM_SNAPDRAGON;
+        ProcessorProducent lGG6ProcessorProducentExpected = ProcessorProducent.QUALCOMM_SNAPDRAGON;
         ProcessorProducent samsungGalaxyS21PlusProcessorProducentExpected = ProcessorProducent.SAMSUNG_EXYNOS;
-        ProcessorProducent realmeV15ProcessorProducentExpected = ProcessorProducent.MEDIA_TEK;
+        ProcessorProducent realmeV15ProcessorProducentExpected = ProcessorProducent.MEDIATEK;
 
         //when
         ProcessorProducent xiaomiMi9TProcessorProducent = xiaomiMi9T.getProcessorProducent();

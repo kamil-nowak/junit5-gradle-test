@@ -1,3 +1,4 @@
+import component.ProcessorProducent;
 import lombok.*;
 
 @Getter
@@ -29,13 +30,13 @@ public class PhoneLombok {
     }
 
     public ProcessorProducent getProcessorProducent() {
-        if (isProcessorProducentMatch(ProcessorProducent.QUALCOMM)) {
-            return ProcessorProducent.QUALCOMM;
+        if (isProcessorProducentMatch(ProcessorProducent.QUALCOMM_SNAPDRAGON)) {
+            return ProcessorProducent.QUALCOMM_SNAPDRAGON;
         }
         if (isProcessorProducentMatch(ProcessorProducent.SAMSUNG_EXYNOS)) {
             return ProcessorProducent.SAMSUNG_EXYNOS;
         }
-        return ProcessorProducent.MEDIA_TEK;
+        return ProcessorProducent.MEDIATEK;
     }
 
     private boolean isProcessorProducentMatch(ProcessorProducent processorProducent) {
