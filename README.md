@@ -2,6 +2,16 @@
 
 Tests in 'gradleTest3.test': 46 total, 46 passed
 
+| Element | Class, % | Method, % | Line, % |
+|---|---|---|---|
+| component | 100% (2/2) | 100% (6/6) | 100% (11/11) |
+| Phone	| 100% (2/2) | 100% (27/27) | 100% (47/47) |
+| PhoneDatabase| 100% (1/1) | 100% (5/5) | 100% (11/11) |
+| PhoneLombok | 100% (2/2) | 100% (19/19) | 100% (24/24) |
+| ReleaseDate | 100% (1/1) | 100% (5/5) | 100% (14/14) |
+| ReleaseDateException | 100% (1/1) | 100% (1/1) | 100% (2/2) |
+
+
 ## ProcessorTest 77 ms
 * testToString() <span style="color:green">passed</span> 50 ms
 * getProducent() <span style="color:green">passed</span> 25 ms
